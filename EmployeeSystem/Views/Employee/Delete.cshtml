@@ -1,0 +1,33 @@
+﻿@model EmployeeSystem.Models.EmployeeModel
+
+<div class="container">
+    <h2 class="text-danger">Delete Employee</h2>
+    <h5>Are you sure you want to delete this employee?</h5>
+
+    <div class="mb-3">
+        <label>ID: @Model.EmployeeID</label>
+        <!-- Displaying Employee ID -->
+    </div>
+    <div class="mb-3">
+        <label>Name: @Model.Name</label>
+    </div>
+    <div class="mb-3">
+        <label>Position: @Model.Position</label>
+    </div>
+    <div class="mb-3">
+        <label>Department: @Model.Department</label>
+    </div>
+    <div class="mb-3">
+        <label>Email: @Model.Email</label> <!-- Added Email display -->
+    </div>
+    
+    <div class="mb-3">
+        <label>Salary: @Model.Salary.ToString("C")</label> <!-- Added Salary display -->
+    </div>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="EmployeeID" /> <!-- Hidden field for Employee ID -->
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-controller="Employee" asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

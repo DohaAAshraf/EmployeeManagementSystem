@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Employee Management System</h1>
+    <p>Use the navigation menu to manage employee records.</p>
+
+    <div>
+        <a asp-controller="Employee" asp-action="Index" class="btn btn-primary">Go to Employee List</a>
+        <a asp-controller="Employee" asp-action="Create" class="btn btn-success">Add New Employee</a>
+    </div>
+</div>
